@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Aggregates columns for each farms using a formula</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for getFormulaResult {fadnUtils}"><tr><td>getFormulaResult {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Aggregates columns for each farms using a formula</h2>
+
+<h3>Description</h3>
+
+<p>Aggregates columns for each farms using a formula
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getFormulaResult(data, SEdata, formulaString, aggregator = sum, onlyValue = T)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>a fadn.container, containing all tables</p>
+</td></tr>
+<tr valign="top"><td><code>SEdata</code></td>
+<td>
+<p>a data.table of already calculated SE</p>
+</td></tr>
+<tr valign="top"><td><code>formulaString</code></td>
+<td>
+<p>The formula String to use for aggregation</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>[FID VALUE]
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+#definition of formula SE610+SE615+SE624-SE626
+formula=list(add=c("SE610","J830(2)","#289","#267..270"),substract=c("SE626","M632..634(2)"))
+list(add=c("#48","#49","#50"),substract=list())
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

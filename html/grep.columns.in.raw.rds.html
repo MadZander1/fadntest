@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Grep a pattern into a raw.rds column names</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for grep.columns.in.raw.rds {fadnUtils}"><tr><td>grep.columns.in.raw.rds {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Grep a pattern into a raw.rds column names</h2>
+
+<h3>Description</h3>
+
+<p>Useful for the case where one want to look if there are certain columns present or missing
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+grep.columns.in.raw.rds(pattern, countries = c("all"), years = c("all"))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>pattern</code></td>
+<td>
+<p>a grep-like character pattern. This parameter is passed as is to the grep function</p>
+</td></tr>
+<tr valign="top"><td><code>countries</code></td>
+<td>
+<p>a character vector with all the 3-letter codes of the selected countries, e.g. c(&quot;ELL&quot;, &quot;ESP&quot;).
+If &quot;all&quot; is included, all available countries are loaded</p>
+</td></tr>
+<tr valign="top"><td><code>years</code></td>
+<td>
+<p>a numeric vector with the years selected. If &quot;all&quot; is included, all available years are loa</p>
+</td></tr>
+<tr valign="top"><td><code>show</code></td>
+<td>
+<p>if TRUE, the columsn are printed</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Prints the columns and returns them invisibly
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

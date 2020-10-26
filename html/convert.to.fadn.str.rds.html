@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Converts an fadn.raw.rds file to fadn.str.rds file using a...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for convert.to.fadn.str.rds {fadnUtils}"><tr><td>convert.to.fadn.str.rds {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Converts an fadn.raw.rds file to fadn.str.rds file using a raw_str_map.json file</h2>
+
+<h3>Description</h3>
+
+<p>The raw_str_map.json specification is as follows:
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+convert.to.fadn.str.rds(
+  fadn.country = NA,
+  fadn.year = NA,
+  raw_str_map.file = NULL,
+  str.name = NULL,
+  DEBUG = F
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>fadn.country</code></td>
+<td>
+<p>string with the country to extract the str data</p>
+</td></tr>
+<tr valign="top"><td><code>fadn.year</code></td>
+<td>
+<p>the year to extract the structured data</p>
+</td></tr>
+<tr valign="top"><td><code>raw_str_map.file</code></td>
+<td>
+<p>the full path to the raw_str_map file.</p>
+</td></tr>
+<tr valign="top"><td><code>DEBUG</code></td>
+<td>
+<p>if TRUE, prints more details on the conversion process</p>
+</td></tr>
+<tr valign="top"><td><code>str.short_name</code></td>
+<td>
+<p>the short name of the str data. No spaces and text up to 10 characters</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<p>&quot;id&quot;:  &quot;COLUMN in every list member in RDS&quot;: &quot;COLUMN IN CSV&quot;, ....,
+&quot;info&quot;:  &quot;COLUMN in info RDS&quot;: &quot;COLUMN IN CSV&quot;, ....,
+&quot;livestock&quot;: 
+&quot;crops&quot;: 
+&quot;CROP NAME 1&quot;: &quot;description&quot;: &quot;description of crop name&quot;, &quot;columns&quot;: &quot;VARIABLE NAME&quot;: COLUMN IN CSV&quot;, ....   ,
+&quot;CROP NAME 2&quot;: &quot;description&quot;: &quot;description of crop name&quot;, &quot;columns&quot;: &quot;VARIABLE NAME&quot;: COLUMN IN CSV&quot;, ....   ,
+....
+
+
+</p>
+<p>The structure of the str.dir:
+- A data.dir can hold more than one extractions.
+- Each extraction has a short name (10 or less characters, whitespace is not allowed)
+- Each extraction is stored in the data.dir/rds/&lt;extraction_name&gt;
+- That folder contains the following files:
++ raw_str_map.json: the raw_str_map
++ fadn.str.&lt;4-digit YEAR&gt;.&lt;3-letter COUNTRY&gt;.rds: the extracted data
+</p>
+<p>Notes:
+1) The computed RDS file contains a list structure with the following keys: info, costs, livestock-animals and crops
+All are data.tables. For all of them, the first columns are those that are contained in the &quot;id&quot; object
+&quot;info&quot; and &quot;costs&quot; are in table format, i.e. each farm is one row and data is on columns, as defined in the
+related raw_str_map.json file.
+&quot;crops&quot; and &quot;livestock-animals&quot; are in wide data format (https://tidyr.tidyverse.org/), where one farm lies accross many rows, and each
+row is a farm-crop-variableName-value combination
+</p>
+<p>2) In $id, $info and $costs, &quot;COLUMN IN CSV&quot; can have two forms
+i) a single column name in the fadn.raw csv file or a combination, e.g. &quot;K120SA+K120FC+K120FU+K120CV-K120BV&quot;
+ii) the form of an object &quot;source&quot;: &quot;the column in the csv&quot;, &quot;description&quot;: &quot;a description of what this column is about&quot;
+</p>
+<p>3) We attach certain attributes that are useful for identifying informations:
+i) In $info and $costs, the attribute &quot;column description&quot; provide information of the formula and the description of each column
+ii) In $crops and $livestock-animals, the attribute &quot;$crops.descriptions&quot; and &quot;$livestock.descriptions&quot;, provide the description of each CROP contained there
+iii) In $crops and $ the attribute &quot;$column.formulas&quot; provide the formulas used in order to derive the VALUE
+</p>
+
+
+<h3>Value</h3>
+
+<p>Saves the rds.str.fadn and returns TRUE if everything goes well
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

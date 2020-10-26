@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Gets a fadn.raw.csv (csv file from DG-AGRI) and transforms it...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for convert.to.fadn.raw.rds {fadnUtils}"><tr><td>convert.to.fadn.raw.rds {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Gets a fadn.raw.csv (csv file from DG-AGRI) and transforms it accordingly to fadn.raw.rds</h2>
+
+<h3>Description</h3>
+
+<p>Gets a fadn.raw.csv (csv file from DG-AGRI) and transforms it accordingly to fadn.raw.rds
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+convert.to.fadn.raw.rds(
+  file.path = "",
+  sepS = ",",
+  fadn.year = NA,
+  fadn.country = NA,
+  keep.csv = F
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>file.path</code></td>
+<td>
+<p>the full path of the csv file (the filename must be included)</p>
+</td></tr>
+<tr valign="top"><td><code>sepS</code></td>
+<td>
+<p>the separator of the csv files (by default &quot;,&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>fadn.year</code></td>
+<td>
+<p>the year the csv files refers to (e.g. 2001)</p>
+</td></tr>
+<tr valign="top"><td><code>fadn.country</code></td>
+<td>
+<p>the three letter country code the csv files refers to (e.g. &quot;ELL&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>keep.csv</code></td>
+<td>
+<p>if TRUE, copy the csv files to the CSV directory; else do not copy</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Saves the fadn.raw.rds file and returns TRUE if everything goes well
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

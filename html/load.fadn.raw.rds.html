@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Load all rds.raw.FADN data for selcted years and countries...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for load.fadn.raw.rds {fadnUtils}"><tr><td>load.fadn.raw.rds {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Load all rds.raw.FADN data for selcted years and countries (rbinds them)</h2>
+
+<h3>Description</h3>
+
+<p>It adds two columns: load.YEAR and load.COUNTRY in each row. This can be used to group per year,country the data
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+load.fadn.raw.rds(
+  countries = c("all"),
+  years = c("all"),
+  col.filter = NULL,
+  row.filter = NULL
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>countries</code></td>
+<td>
+<p>a character vector with all the 3-letter codes of the selected countries, e.g. c(&quot;ELL&quot;, &quot;ESP&quot;).
+If &quot;all&quot; is included, all available countries are loaded</p>
+</td></tr>
+<tr valign="top"><td><code>years</code></td>
+<td>
+<p>a numeric vector with the years selected. If &quot;all&quot; is included, all available years are loaded</p>
+</td></tr>
+<tr valign="top"><td><code>col.filter</code></td>
+<td>
+<p>a character vector with the columns to load. If NULL, all columns are loaded. E.g columns=c('ILOTH_VET_V', 'ILVOTH_V','id')</p>
+</td></tr>
+<tr valign="top"><td><code>row.filter</code></td>
+<td>
+<p>a string giving an expression that will be evaluated in order to select rows. If NULL, all rows are returned. E.g. filter='TF8==1'</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>list( &quot;countries&quot;=&gt; c(&lt;RETURNED COUNTRIES), &quot;years&quot;=&gt;c(&lt;AVAILABLE YEARS) )
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

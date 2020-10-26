@@ -1,0 +1,49 @@
+analyzeFormula          Dissagregates a string formula to a
+                        list(add=c("SE610","J830(2)","#289","#267..270"),substract=c("SE626","M632..634(2)"))
+check.data.dir.structure
+                        Checks if the structure of the
+                        fadnUtils.data.dir is ok
+check.raw_str_map       Checks if the definitions of a raw_str_map are
+                        compatible with a fadn.raw.rds for a certain
+                        year and country
+convert.to.fadn.raw.rds
+                        Gets a fadn.raw.csv (csv file from DG-AGRI) and
+                        transforms it accordingly to fadn.raw.rds
+convert.to.fadn.str.rds
+                        Converts an fadn.raw.rds file to fadn.str.rds
+                        file using a raw_str_map.json file
+create.data.dir         Creates a data.dir
+delete.fadn.raw         Title
+delete.fadn.str         Title
+get.available.fadn.raw.rds
+                        Returns the available YEAR-COUNTRY fadn.raw.rds
+get.available.fadn.str.rds
+                        Returns the available YEAR-COUNTRY
+                        fadn.str.rds, for each str.folder
+get.data.dir            Gets the data.dir
+get.rds.stored.data     Shows a table of the rds.stored.data
+getFormulaResult        Aggregates columns for each farms using a
+                        formula
+grep.columns.in.raw.rds
+                        Grep a pattern into a raw.rds column names
+import.fadn.csv         Imports a DG-AGRI csv into fadnUtils
+load.fadn.raw.rds       Load all rds.raw.FADN data for selcted years
+                        and countries (rbinds them)
+load.fadn.str.rds       Load all rds.str.FADN data for seelcted years
+                        and countries
+raw_str_map.merge       Merges two raw_str_map files and returns either
+                        a list or a file
+restore.rds.stored.data
+                        Restore stored data
+set.data.dir            Sets the data.dir
+show.data.dir.contents
+                        Show the contents of data.dir
+store.rds.data          Store Loaded data
+take.raw_str_map.columns
+                        Takes $id, $info, $costs objects of a
+                        raw_str_map object and create
+                        Source-Description pairs
+update_elements.DT      Updates selected elements of data stored in one
+                        DT with new one given in melted format
+write.excel             Utility to copy data to clipboard for pasting
+                        to Excel

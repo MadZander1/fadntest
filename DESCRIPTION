@@ -1,11 +1,14 @@
 Package: fadnUtils
+Title: An R package to easily load and manipulate FADN data
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Version: 1.0.2
+Author: Dimitris Kremmydas <Dimitrios.KREMMYDAS@ec.europa.eu>
+Maintainer: Dimitris Kremmydas <Dimitrios.KREMMYDAS@ec.europa.eu>
+Description: Manipulate and perform data analysis with FADN data
+License: Proprietary software (JRC D.4)
 Encoding: UTF-8
-LazyData: true
+LazyData: TRUE
+Depends: R (>= 3.4.0)
+Imports: data.table, jsonlite
+RoxygenNote: 7.1.1
+Built: R 3.6.0; ; 2020-09-28 10:10:22 UTC; windows

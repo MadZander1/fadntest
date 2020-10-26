@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Updates selected elements of data stored in one DT with new...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for update_elements.DT {fadnUtils}"><tr><td>update_elements.DT {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Updates selected elements of data stored in one DT with new one given in melted format</h2>
+
+<h3>Description</h3>
+
+<p>The user provides the data.new: id,variable,new value. The function overwrites all existing id-column with the new values
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+update_elements.DT(data.old, data.new)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data.old</code></td>
+<td>
+<p>The DT to update</p>
+</td></tr>
+<tr valign="top"><td><code>data.new</code></td>
+<td>
+<p>The data to insert. It must have three columns:  id,variable,new value. E.g. data.new=data.table(&quot;id&quot;=c(810001100105),&quot;variable&quot;=c(&quot;AASBIO_CV&quot;),value=c(999999))</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a DT with the updated values
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Merges two raw_str_map files and returns either a list or a...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for raw_str_map.merge {fadnUtils}"><tr><td>raw_str_map.merge {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Merges two raw_str_map files and returns either a list or a file</h2>
+
+<h3>Description</h3>
+
+<p>All entries in the new.raw_str_map file replace those on the source.raw_str_map file
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+raw_str_map.merge(
+  source.raw_str_map.file = NULL,
+  new.raw_str_map.file = NULL,
+  return.file = F
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>source.raw_str_map.file</code></td>
+<td>
+<p>the filename of the source raw_str_map. It must be relative the raw_str_maps of the current data.dir</p>
+</td></tr>
+<tr valign="top"><td><code>new.raw_str_map.file</code></td>
+<td>
+<p>the filename of the mask raw_str_map. It will replace any entries of the source file. It must be relative the raw_str_maps of the current data.dir</p>
+</td></tr>
+<tr valign="top"><td><code>return.file</code></td>
+<td>
+<p>If set to T, a temporary full file path that contains the merge is returned. Otherwise a list with the contents of the merge is returned</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Both files must be relative to the current data.dir/raw_str_maps
+</p>
+
+
+<h3>Value</h3>
+
+<p>FALSE in case of problem / if return.file=T, the temporary full path of a file that contains the merged result in json  / A list with the contents of the merge if return.file=F
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>

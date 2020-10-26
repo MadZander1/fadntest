@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Imports a DG-AGRI csv into fadnUtils</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for import.fadn.csv {fadnUtils}"><tr><td>import.fadn.csv {fadnUtils}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Imports a DG-AGRI csv into fadnUtils</h2>
+
+<h3>Description</h3>
+
+<p>It first call the convert.to.fadn.raw.rds and then convert.to.fadn.str.rds
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+import.fadn.csv(
+  file.path,
+  raw.f = NULL,
+  sepS = ",",
+  fadn.year = NA,
+  fadn.country = NA,
+  keep.csv = F
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>file.path</code></td>
+<td>
+<p>the full path of the file (the filename must be included)</p>
+</td></tr>
+<tr valign="top"><td><code>raw.f</code></td>
+<td>
+<p>the raw_str_map file to use. it must reside inside 'raw_str_maps; folder of the data.dir</p>
+</td></tr>
+<tr valign="top"><td><code>sepS</code></td>
+<td>
+<p>the separator of the csv files (by default &quot;,&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>fadn.year</code></td>
+<td>
+<p>the year the csv files refers to (e.g. 2001)</p>
+</td></tr>
+<tr valign="top"><td><code>fadn.country</code></td>
+<td>
+<p>the three letter country code the csv files refers to (e.g. &quot;ELL&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>keep.csv</code></td>
+<td>
+<p>if TRUE, copy the csv files; else do not copy</p>
+</td></tr>
+</table>
+
+<hr /><div style="text-align: center;">[Package <em>fadnUtils</em> version 1.0.2 <a href="00Index.html">Index</a>]</div>
+</body></html>
